@@ -56,9 +56,9 @@ class Setup {
 		}
 
 		#if desktop
-		var filename = "./libs.xml";
+		var libFile = "./libs.xml";
 		#else
-		var filename = "./libs-mobile.xml";
+		var libFile = "./libs-mobile.xml";
 		#end
 		if(args.existsOption("lib")) {
 			libFile = args.getOption("lib");
