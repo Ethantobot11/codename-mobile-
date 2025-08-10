@@ -24,10 +24,10 @@ import openfl.utils.AssetLibrary;
 #if ALLOW_MULTITHREADING
 import sys.thread.Thread;
 #end
-#if android
-import android.content.Context;
-import android.os.Build;
+#if sys
+import sys.io.File;
 #end
+import funkin.backend.assets.ModsFolder;
 
 class Main extends Sprite
 {
