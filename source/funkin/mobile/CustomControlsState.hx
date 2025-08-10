@@ -18,8 +18,8 @@ class CustomControlsState extends MusicBeatSubstate {
     var _hb:HitBox;
 
     var exitButton:FlxButtonPlus;
-    var exportButton:FlxUIButton;
-    var importButton:FlxUIButton;
+    var exportButton:FlxButtonPlus;
+    var importButton:FlxButtonPlus;
 
     var inputVari:FlxText;
     var upText:FlxText;
