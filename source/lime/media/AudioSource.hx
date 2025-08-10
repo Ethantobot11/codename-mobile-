@@ -228,11 +228,6 @@ class AudioSource
 	{
 		return __backend.setPosition(value);
 	}
-
-	@:noCompletion inline private function get_latency():Float
-	{
-		return __backend.getLatency();
-	}
 }
 
 #if (js && html5)
