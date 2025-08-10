@@ -2,6 +2,10 @@ package;
 
 import commands.*;
 
+#if mobile
+import mobile.backend.MobileScaleMode;
+#end
+
 class Main {
 	public static var commands:Array<Command> = [];
 
