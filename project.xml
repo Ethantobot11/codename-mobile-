@@ -10,11 +10,7 @@
 	<!--
 		CHANGE THE SAVE PATH & NAME FOR YOUR MOD HERE!
 	-->
-	<haxedef name="SAVE_PATH" value="CodenameEngine"/>
-	<haxedef name="SAVE_NAME" value="save-default"/>
-
-	<haxedef name="SAVE_OPTIONS_PATH" value="CodenameEngine"/>
-	<haxedef name="SAVE_OPTIONS_NAME" value="options"/>
+	<app save-path="YoshiCrafter29/CodenameEngine" save-name="save-default" mod-saves="true" />
 
 	<!--Switch Export with Unique ApplicationID and Icon-->
 	<set name="APP_ID" value="0x0100f6c013bbc000" />
@@ -147,6 +143,7 @@
 	<set name="BUILD_DIR" value="latest/" if="beta" />
 
 	<source name="source" />
+	<assets path='assets/mobile' if='mobile'/>
 
 	<define name="PRELOAD_ALL" unless="web" />
 	<define name="NO_PRELOAD_ALL" unless="PRELOAD_ALL"/>
