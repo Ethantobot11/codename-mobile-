@@ -151,6 +151,26 @@ class Main {
 		}
 	}
 
+	public function new()
+	{
+		super();
+		#if mobile
+		#if android
+		StorageUtil.requestPermissions();
+		#end
+		Sys.setCwd(StorageUtil.getStorageDirectory());
+		#end
+		backend.CrashHandler.init();
+
+		#if windows
+		@:functionCode("
+			#include <windows.h>
+			#include <winuser.h>
+			setProcessDPIAware() // allows for more crisp visuals
+			DisableProcessWindowsGhosting() // lets you move the window and such if it's not responding
+		")
+		#end
+
 	public static function help(args:Array<String>) {
 		var cmdName = args.shift();
 		if (cmdName != null) {
