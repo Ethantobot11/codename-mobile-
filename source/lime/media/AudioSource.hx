@@ -204,7 +204,7 @@ class AudioSource
 		return __backend.getLoopTime();
 	}
 
-	@:noCompletion inline private function set_loopTime(value:Float):Float
+	@:noCompletion inline private function set_loopTime(value:Int):Int
 	{
 		return __backend.setLoopTime(value);
 	}
