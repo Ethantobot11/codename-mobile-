@@ -55,7 +55,11 @@ class Setup {
 			FileSystem.createDirectory('.haxelib');
 		}
 
-		var libFile = "./libs.xml";
+		#if desktop
+		var filename = "./libs.xml";
+		#else
+		var filename = "./libs-mobile.xml";
+		#end
 		if(args.existsOption("lib")) {
 			libFile = args.getOption("lib");
 			if(libFile == null) {
