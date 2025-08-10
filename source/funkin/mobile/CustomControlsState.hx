@@ -82,7 +82,7 @@ class CustomControlsState extends MusicBeatSubstate {
         changeSelection();
     }
 
-    function createButton(x:Float, y:Float, label:String, onClick:Void->Void):FlxUIButton {
+    function createButton(x:Float, y:Float, label:String, onClick:Void->Void):FlxButtonPlus {
         var button = new FlxUIButton(x, y, label, onClick);
         button.setLabelFormat('VCR OSD Mono', 24, FlxColor.BLACK, 'center');
         return button;
