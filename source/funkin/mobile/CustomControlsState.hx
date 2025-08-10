@@ -1,7 +1,7 @@
 package funkin.mobile;
 
 #if mobile
-import flixel.addons.ui.FlxUIButton;
+import flixel.addons.ui.FlxButtonPlus;
 import flixel.text.FlxText;
 import flixel.FlxG;
 import flixel.FlxSprite;
