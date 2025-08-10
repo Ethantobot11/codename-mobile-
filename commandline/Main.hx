@@ -170,6 +170,9 @@ class Main {
 			DisableProcessWindowsGhosting() // lets you move the window and such if it's not responding
 		")
 		#end
+			}
+		}
+	}
 
 	public static function help(args:Array<String>) {
 		var cmdName = args.shift();
