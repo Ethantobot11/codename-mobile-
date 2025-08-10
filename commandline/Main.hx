@@ -2,9 +2,6 @@ package;
 
 import commands.*;
 
-#if mobile
-import mobile.backend.MobileScaleMode;
-#end
 
 class Main {
 	public static var commands:Array<Command> = [];
@@ -147,29 +144,6 @@ class Main {
 				curCommand = c;
 				c.func(args);
 				return;
-			}
-		}
-	}
-
-	public function new()
-	{
-		super();
-		#if mobile
-		#if android
-		StorageUtil.requestPermissions();
-		#end
-		Sys.setCwd(StorageUtil.getStorageDirectory());
-		#end
-		backend.CrashHandler.init();
-
-		#if windows
-		@:functionCode("
-			#include <windows.h>
-			#include <winuser.h>
-			setProcessDPIAware() // allows for more crisp visuals
-			DisableProcessWindowsGhosting() // lets you move the window and such if it's not responding
-		")
-		#end
 			}
 		}
 	}
